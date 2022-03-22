@@ -60,13 +60,14 @@
     <h3>Meest geliked</h3>
     <div id="carousel">
       <?php	
-    $sql="SELECT SerieID FROM `seizoen`  WHERE Jaar <='2022' ORDER BY `seizoen`.`IMDBRating`  DESC";
+    $sql="SELECT SerieID FROM `seizoen`  WHERE Jaar <='2022' ORDER BY `seizoen`.`IMDBRating` LIMIT 20; DESC";
     $res = $conn->prepare($sql);
    $res->execute();
    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
      echo "<div class='blok'>";
- 
-       echo "<img class='plaatje' src='images/".$row['SerieID'].".jpg'>";
+      $plaatje = substr("0000" . $row['SerieID'], -5);
+
+       echo "<img class='plaatje' src='images/".$plaatje.".jpg'>";
       
        echo "</div>";
    }
@@ -100,3 +101,4 @@ function currentSlide(n) {
 }
 </script>
 </html>
+
