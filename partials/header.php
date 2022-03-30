@@ -1,6 +1,4 @@
-<?php
-$conn = new PDO('mysql:host=localhost;dbname=hobo', "root", "");
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +7,7 @@ $conn = new PDO('mysql:host=localhost;dbname=hobo', "root", "");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="STYLESHEET" href="CSS/Style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/98b76129a9.js" crossorigin="anonymous"></script>
     <title>Document</title>
     
 </head>
