@@ -1,8 +1,13 @@
 <?php
 
   require_once 'partials/header.php';
+  require_once 'backend/class/DbConfig.php';
+
+  $connection = new DbConfig();
 
 ?>
+
+<body>
  <!-- Slideshow container -->
  <div class="slideshow-container">
 
@@ -42,41 +47,55 @@
     <h3>Trending</h3>
     <div id="carousel">
       <?php	
-    $sql="select LPAD(s.SerieID, 5,'0') SerieID, s.SerieTitel, COUNT(*) AantalS from serie s join seizoen z ON s.SerieID=z.SerieID where actief=1 GROUP BY s.SerieID LIMIT 10;";
-    $res = $conn->prepare($sql);
+    $sql="select LPAD(s.SerieID, 5,'0') SerieID, s.SerieTitel, COUNT(*) AantalS from serie s join seizoen z ON s.SerieID=z.SerieID where actief=1 GROUP BY s.SerieID LIMIT 20;";
+    $res = $connection->connect()->prepare($sql);
    $res->execute();
    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
-     echo "<div class='blok'>";
- 
-       echo "<img class='plaatje' src='images/".$row['SerieID'].".jpg'>";
-       echo $row['SerieTitel'];
-       echo "</div>";
-   }
-   ?>
+    $plaatje = substr("0000" . $row['SerieID'] , -5);
+    ?>
+    <a href="ALA.php">
+    <div class='blok'>
+  
+    <img class='plaatje' src='images/<?= $plaatje ?>.jpg' onError="this.onerror=null;this.src='images/noimage.png';"> <br>
+    <?php echo $row['SerieTitel'] ?>
+    </div>
+    </a>
+  <?php
+  }
+  ?>
     </div>
 </section>
 
-<section class="item-kanaal3">
+<section class="item-kanaal2">
     <h3>Meest geliked</h3>
     <div id="carousel">
       <?php	
     $sql="SELECT SerieID FROM `seizoen`  WHERE Jaar <='2022' ORDER BY `seizoen`.`IMDBRating` LIMIT 20; DESC";
-    $res = $conn->prepare($sql);
+    $res = $connection->connect()->prepare($sql);
    $res->execute();
    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
-     echo "<div class='blok'>";
-      $plaatje = substr("0000" . $row['SerieID'], -5);
-
-       echo "<img class='plaatje' src='images/".$plaatje.".jpg'>";
-      
-       echo "</div>";
-   }
-   ?>
+   $plaatje = substr("0000" . $row['SerieID'] , -5);
+    ?>
+    <a href="ALA.php">
+    <div class='blok'>
+  
+    <img class='plaatje' src='images/<?= $plaatje ?>.jpg' onError="this.onerror=null;this.src='images/noimage.png';"> <br>
+    
+    </div>
+    </a>
+  <?php
+  }
+  
+  ?>
     </div>
 </section>
   
 
 </body>
+
+<footer>
+  <br><br>
+</footer>
 
 <script>
 var slideIndex = 0;
