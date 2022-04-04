@@ -6,7 +6,6 @@
   $connection = new DbConfig();
 
 ?>
-
 <body>
  <!-- Slideshow container -->
  <div class="slideshow-container">

@@ -18,6 +18,15 @@
 
  
 <div> -->
+
+<!-- logo -->
+<body>
+  <header>
+    <img class="logo" src="images/hobologo.png" alt="Logo HOBO" height="100px">
+</header>
+
+
+
   <nav class="main-menu">
 <div class="scrollbar" id="style-1">
       
