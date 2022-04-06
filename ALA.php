@@ -2,8 +2,12 @@
 
   require_once 'partials/header.php';
   require_once 'backend/class/DbConfig.php';
+  require_once 'backend/class/Serie.php';
 
   $connection = new DbConfig();
+  $serieIns = new Serie();
+
+
 
 ?>
 
@@ -43,6 +47,24 @@
   </div>
   
 </div>
+<?php
+if(isset($_GET['genre'])){
+  $genreId = $serieIns->getGenreById($_GET['genre']);
+?>
+<section class="item-kanaal2">
+    <h3>Genre - <?= $genreId->GenreNaam ?></h3>
+    <div id="carousel">
+      <?php foreach($serieIns->getSeriesByGenre($_GET['genre']) as $serie){ ?>
+      <div class='blok'>
+        <img class='plaatje' src='images/<?= $serieIns->getSerieImage($serie->SerieID) ?>.jpg' onError="this.onerror=null;this.src='images/noimage.png';"> <br>
+        <?= $serie->SerieTitel ?>
+      </div>
+      <?php } ?>
+    </div>
+</section>
+<?php
+}
+?>
 <section class="item-kanaal2">
     <h3>Trending</h3>
     <div id="carousel">
@@ -53,7 +75,7 @@
    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
     $plaatje = substr("0000" . $row['SerieID'] , -5);
     ?>
-    <a href="ALA.php">
+    <a href="Seriescherm.php">
     <div class='blok'>
   
     <img class='plaatje' src='images/<?= $plaatje ?>.jpg' onError="this.onerror=null;this.src='images/noimage.png';"> <br>
@@ -76,7 +98,7 @@
    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
    $plaatje = substr("0000" . $row['SerieID'] , -5);
     ?>
-    <a href="ALA.php">
+    <a href="Seriescherm.php">
     <div class='blok'>
   
     <img class='plaatje' src='images/<?= $plaatje ?>.jpg' onError="this.onerror=null;this.src='images/noimage.png';"> <br>
