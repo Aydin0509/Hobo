@@ -10,7 +10,6 @@
 
 
 ?>
-
 <body>
  <!-- Slideshow container -->
  <div class="slideshow-container">
