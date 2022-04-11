@@ -10,6 +10,10 @@
 
 <style>
 
+body {
+  background-image: url("images/achtergrond.png");
+  background-repeat: no-repeat;
+}
 
 .search {
   width: 100%;
