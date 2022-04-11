@@ -46,24 +46,7 @@
   </div>
   
 </div>
-<?php
-if(isset($_GET['genre'])){
-  $genreId = $serieIns->getGenreById($_GET['genre']);
-?>
-<section class="item-kanaal2">
-    <h3>Genre - <?= $genreId->GenreNaam ?></h3>
-    <div id="carousel">
-      <?php foreach($serieIns->getSeriesByGenre($_GET['genre']) as $serie){ ?>
-      <div class='blok'>
-        <img class='plaatje' src='images/<?= $serieIns->getSerieImage($serie->SerieID) ?>.jpg' onError="this.onerror=null;this.src='images/noimage.png';"> <br>
-        <?= $serie->SerieTitel ?>
-      </div>
-      <?php } ?>
-    </div>
-</section>
-<?php
-}
-?>
+
 <section class="item-kanaal2">
     <h3>Trending</h3>
     <div id="carousel">
