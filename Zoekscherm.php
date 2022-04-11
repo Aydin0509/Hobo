@@ -1,3 +1,15 @@
+<style>
+  #serieachtergrond {
+    height:100vh;
+    width:100%;
+    background-image: URL("images/achtergrond.png");
+    background-repeat: no-repeat;
+  }
+
+  }
+  
+</style>
+
 <?php
 
   require_once 'partials/header.php';
@@ -7,12 +19,6 @@
   $serieIns = new Serie();
 
   ?> 
-
-
-body {
-  background-image: url("images/achtergrond.png");
-  background-repeat: no-repeat;
-}
 
 <?php
 $search = new Search();
@@ -29,13 +35,15 @@ function imgError(image) {
     return true;
 }
 </script>
+<body id="serieachtergrond">
+
 <section>
 <div class="wrap">
   <form method="POST"> 
     <div class="search">
       <input type="text" class="searchTerm" name="searchTerm" placeholder="Titels, Series">
       <button type="submit" class="searchButton" name="search">
-        <i class="fa fa-search"></i>
+      <i class="fa fa-search"></i>
         
      </button>
    </div>
@@ -78,3 +86,4 @@ foreach($series as $serie) {
 </div>
 
 </section>
+</body>
