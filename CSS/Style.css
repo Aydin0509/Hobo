@@ -214,12 +214,12 @@ opacity:1;
 }
 
 .main-menu {
-background: rgb(3, 94, 3);
+
 position:absolute;
 /* position:absolute;
 top:0;
 bottom:0; */
-height:30%;
+
 margin: 0;
 /* left:0; */
 width:55px;
