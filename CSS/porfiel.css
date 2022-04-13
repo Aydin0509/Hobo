@@ -1,6 +1,10 @@
 * {
-    background-color: rgb(46, 41, 41);
+    /* background-color: rgb(46, 41, 41); */
     color: white;
+  }
+
+  body{
+    background-color: rgb(46, 41, 41);
   }
 
   .dropbtn {
