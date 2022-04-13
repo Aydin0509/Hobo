@@ -18,9 +18,9 @@
 <div class="dropdown2">
   <button class="dropbtn2">Weergave</button>
   <div class="dropdown-content2">
-  <a href="#">Horror</a>
-  <a href="#">Actie</a>
-  <a href="#">Scifi</a>
+  <a href="#">10</a>
+  <a href="#">20</a>
+  <a href="#">50</a>
   </div>
 </div>
 

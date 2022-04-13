@@ -31,16 +31,17 @@
   }
   
   .dropdown-content a {
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown-content a:hover {background-color: #f1f1f1; color: black;}
   
   .dropdown:hover .dropdown-content {
     display: block;
+    
   }
   
   .dropdown:hover .dropbtn {
@@ -75,13 +76,13 @@
   }
   
   .dropdown-content2 a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
-  .dropdown-content2 a:hover {background-color: #f1f1f1}
+  .dropdown-content2 a:hover {background-color: #f1f1f1; color: black;}
   
   .dropdown2:hover .dropdown-content2 {
     display: block;
@@ -118,13 +119,13 @@
   }
   
   .dropdown-content3 a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
-  .dropdown-content3 a:hover {background-color: #f1f1f1}
+  .dropdown-content3 a:hover {background-color: #f1f1f1; color: black;}
   
   .dropdown3:hover .dropdown-content3 {
     display: block;
