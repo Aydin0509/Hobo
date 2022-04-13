@@ -1,12 +1,18 @@
 <style>
-  #serieachtergrond {
+  body {
     height:100vh;
     width:100%;
     background-image: URL("images/achtergrond.png");
     background-repeat: no-repeat;
   }
+ #serieachtergrond{
+   height: 100vh;
+   width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
 
-  }
+ }
+  
   
 </style>
 
@@ -35,7 +41,10 @@ function imgError(image) {
     return true;
 }
 </script>
-<body id="serieachtergrond">
+<body>
+<main id="serieachtergrond">
+
+
 
 <section>
 <div class="wrap">
@@ -86,4 +95,5 @@ foreach($series as $serie) {
 </div>
 
 </section>
+</main>
 </body>
