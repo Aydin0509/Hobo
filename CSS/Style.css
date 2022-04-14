@@ -167,7 +167,9 @@ opacity:1;
 .main-menu {
 background-color: rgb(46, 41, 41);
 position:absolute;
+
 height:30%;
+
 margin: 0;
 /* left:0; */
 width:55px;
