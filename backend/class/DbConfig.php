@@ -4,7 +4,7 @@ class DbConfig{
 
     public function connect(){
         try{
-            $conn = new PDO("mysql:host=localhost;dbname=hobo2022", 'root','');
+            $conn = new PDO("mysql:host=localhost;dbname=hobo", 'root','root');
            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         }catch(PDOException $e){
