@@ -1,9 +1,3 @@
-
-* {
-  background-color: rgb(30, 30, 32);
-}
-
-
  img {
      border-radius: 40px;
  }
@@ -144,29 +138,6 @@
 }
 
 
-/* ScrolBar  */
-.scrollbar{
-height: 90%;
-width: 100%;
-overflow-y: hidden;
-overflow-x: hidden;
-background-color: green;
-}
-
-.scrollbar:hover
-{
-height: 90%;
-width: 100%;
-overflow-y: scroll;
-overflow-x: hidden;
-}
-
-.scrollbar > ul > li{
-  background-color: rgb(3, 94, 3) !important;
-}
-
-/* Scrollbar Style */ 
-
 
 
 #style-1::-webkit-scrollbar-track
@@ -214,7 +185,7 @@ opacity:1;
 }
 
 .main-menu {
-
+background-color: rgb(46, 41, 41);
 position:absolute;
 /* position:absolute;
 top:0;
