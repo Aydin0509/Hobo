@@ -1,11 +1,9 @@
-* {
-    /* background-color: rgb(46, 41, 41); */
-    color: white;
-  }
-
   body{
     background-color: rgb(46, 41, 41);
+  
   }
+
+
 
   .dropbtn {
     background-color: #4CAF50;
@@ -167,7 +165,7 @@
 }
 
 .searchTerm:focus{
-  color: white;
+  color: black;
 }
 
 .searchButton {
