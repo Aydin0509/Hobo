@@ -54,6 +54,13 @@
   <i class="fa fa-bolt"></i>
 <span class="nav-text">Trending</span>
 </a>
+</li>
+
+<li>                                 
+<a href="History.php">
+<i class="fa fa-history" aria-hidden="true"></i>
+<span class="nav-text">History</span>
+</a>
 </li>   
   
   
