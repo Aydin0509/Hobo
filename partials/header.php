@@ -9,6 +9,7 @@
     <title>HOBO</title>
     <link rel="stylesheet" href="CSS/Style.css" type="text/css">
     <link rel="stylesheet" href="CSS/porfiel.css" type="text/css">
+    <link rel="stylesheet" href="CSS/login.css" type="text/css">
     <script src="https://kit.fontawesome.com/98b76129a9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script>
@@ -52,6 +53,13 @@
 <a href="ALA.php">
   <i class="fa fa-bolt"></i>
 <span class="nav-text">Trending</span>
+</a>
+</li>
+
+<li>                                 
+<a href="History.php">
+<i class="fa fa-history" aria-hidden="true"></i>
+<span class="nav-text">History</span>
 </a>
 </li>   
   
