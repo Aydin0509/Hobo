@@ -369,3 +369,9 @@ header{
   height: 100px;
   text-align: center;
 }
+
+/* history */
+.history {
+  position: relative;
+  margin-left: 10vw;
+}
