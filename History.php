@@ -22,7 +22,7 @@
   while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
   echo $row['AflTitel']. " ";
   echo $row['d_start']. " ";
-  echo $row['d_eind']. " ";
+  echo "kijk tijd =". " ";
   echo $row['tijd']. ' Minutten<br>';
  }
  ?>
