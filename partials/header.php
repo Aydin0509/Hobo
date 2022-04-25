@@ -1,5 +1,8 @@
+<?php
+require_once 'backend/class/User.php';
+session_start();
 
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,12 +68,15 @@
   
   
 <li>
-                                   
+
+<?php if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd']){ ?>
 <a href="Profielscherm.php">
+<?php }else{ ?>
+<a href="aanmelden.php">
+<?php } ?>
 <i class="fa fa-user fa-lg"></i>
-<span class="nav-text">Account</span>
-</a>
-</li>   
+<span class="nav-text">Account</span></a>
+</li>
     
   
 <li>

@@ -99,7 +99,7 @@ a{color:inherit;text-decoration:none}
 }
 .login-form .group label .icon:before,
 .login-form .group label .icon:after{
-	content:'';
+	content:'';	
 	width:10px;
 	height:2px;
 	background:#fff;
