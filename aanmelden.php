@@ -11,7 +11,7 @@ if(isset($_POST['register'])){
 if(isset($_POST['login'])){
 	echo $user->login($_POST);
 }
-
+session_start();
 ?>
 
 <body>
@@ -23,11 +23,11 @@ if(isset($_POST['login'])){
 			<div class="sign-in-htm">
 				<div class="group">
 					<label for="email" class="label">Email</label>
-					<input id="email" type="text" class="input" name="email" required>
+					<input id="email" type="text" class="input" name="email-login">
 				</div>
 				<div class="group">
 					<label for="password" class="label">Wachtwoord</label>
-					<input id="pass" type="password" class="input" name="password" required>
+					<input id="pass" type="password" class="input" name="password-login">
 				</div>
 				<div class="group">
 					<input type="submit" class="button" name="login" value="Inloggen">
@@ -40,18 +40,20 @@ if(isset($_POST['login'])){
 					<label for="tab-2">Nog geen lid?</a>
 				</div>
 			</div>
+		<!-- </form> -->
+		<!-- <form methode="post" class="login-form"> -->
 			<div class="sign-up-htm">
 				<div class="group">
 					<label for="email" class="label">Email</label>
-					<input id="email" type="text" name="email" required class="input">
+					<input id="email" type="text" name="email" class="input">
 				</div>
 				<div class="group">
 					<label for="password" class="label">Wachtwoord</label>
-					<input id="password" type="password" name="password" required class="input">
+					<input id="password" type="password" name="password" class="input">
 				</div>
 				<div class="group">
 					<label for="password" class="label">Herhaal wachtwoord</label>
-					<input id="password" type="password" name="conf-password" required class="input">
+					<input id="password" type="password" name="conf-password" class="input">
 				</div>
 				<div class="group">
 					<label for="AboID" class="label">Kies abonnement</label>

@@ -18,7 +18,7 @@ class User extends DbConfig{
             if(!$stmt->execute()){
                 throw new Exception("Account kon niet aangemaakt worden");
             }
-            header("Location: login.php");
+            header("Location: aanmelden.php");
         }catch(Exception $e){
             echo $e->getMessage();
         }
@@ -26,11 +26,11 @@ class User extends DbConfig{
 
     public function login($data){
         try {
-            $user = $this->getUser($data['email']);
+            $user = $this->getUser($data['email-login']);
             if (!$user) {
                 throw new Exception('Gebruiker bestaat niet.');
             }
-            if(!password_verify($data['password'], $user->password)){
+            if(!password_verify($data['password-login'], $user->password)){
                 throw new Exception("wachtwoord is incorrect.");
             }
             session_start();
@@ -38,7 +38,7 @@ class User extends DbConfig{
             $_SESSION['email'] = $user->Email;
             $_SESSION['id'] = $user->KlantNr;
             $_SESSION['genre'] = $user->Genre;
-            header("Location: home.php");
+            header("Location: Profielscherm.php");
         } catch (Exception $e) {
             echo $e->getMessage();
         }
